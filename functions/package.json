@@ -2,8 +2,9 @@
   "name": "functions",
   "scripts": {
     "build": "tsc",
-    "serve": "npm run build && firebase emulators:start --only functions",
+    "serve": "firebase emulators:start --only functions",
     "shell": "npm run build && firebase functions:shell",
+    "prestart": "npm run build",
     "start": "npm run serve",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log"
