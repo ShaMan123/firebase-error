@@ -1,4 +1,4 @@
-# [Functions]: Global variables behaving as locals
+# [Functions] Global variables behaving as locals
  
 1. clone repo
 2. cd to `functions` dir
