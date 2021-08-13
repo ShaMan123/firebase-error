@@ -18,3 +18,8 @@ The function `increment` behaves as expected though it seems to run in isolation
 
 The subscriber functions do not return, they timeout. Is this why the vars don't persist?
 Even though, during invocation the vars change but are not changed on the global scope.
+
+### Findings
+- https://cloud.google.com/blog/products/serverless/cloud-run-now-supports-http-grpc-server-streaming
+- https://github.com/rickkas7/sse-examples/blob/master/11-google-firebase/package.json
+
