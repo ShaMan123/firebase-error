@@ -36,9 +36,9 @@ app.get('*', useSSE, async (req, res, next) => {
     }, 1000);
 });
 
-export const subscribe = functions.region('europe-west1').https.onRequest(app);
+export const subscribe = functions.https.onRequest(app);
 
-export const subscribe2 = functions.region('europe-west1').https.onRequest((req, res) => {
+export const subscribe2 = functions.https.onRequest((req, res) => {
     useSSE(req, res, () => {
         setInterval(() => {
             j++
@@ -52,7 +52,7 @@ export const subscribe2 = functions.region('europe-west1').https.onRequest((req,
  * This is the only function that persists global variable values
  * Is it because it completes while the SSE functions timeout?
  */
-export const increment = functions.region('europe-west1').https.onRequest((req, res) => {
+export const increment = functions.https.onRequest((req, res) => {
     setTimeout(() => {
         k++;
         functions.logger.info("Global scope vars", { i, j, k });
